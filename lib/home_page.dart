@@ -1,4 +1,4 @@
-
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -11,8 +11,6 @@ class HomePage extends StatefulWidget {
 
 //state object
 class _HomePageState extends State<HomePage> {
-
-
   @override
   Widget build(BuildContext context) {
     print("build");
@@ -21,16 +19,47 @@ class _HomePageState extends State<HomePage> {
         title: Text("Home Page"),
       ),
       body: Container(
-        constraints: BoxConstraints.expand(),
-        color: Colors.blue,
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Container(
-              color : Colors.red ,
-              child: Text("ABC")
-          ),
-        )
-      ),
+          constraints: BoxConstraints.expand(),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Expanded(
+                flex: 1,
+                child: Container(
+                  color: Colors.grey,
+                  child: Text("View A",
+                      style: TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold)),
+                ),
+              ),
+              Expanded(
+                flex: 2,
+                child: Container(
+                  color: Colors.indigo,
+                  child: Text("View B",
+                      style: TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold)),
+                ),
+              ),
+              Expanded(
+                flex: 3,
+                child: Container(
+                  color: Colors.lightBlueAccent,
+                  child: Text("View C",
+                      style: TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold)),
+                ),
+              ),
+              Container(
+                height: 300,
+                color: Colors.orange,
+                child: Text("View D",
+                    style: TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.bold)),
+              ),
+            ],
+          )),
     );
   }
 }
