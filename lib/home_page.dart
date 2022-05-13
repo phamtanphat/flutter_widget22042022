@@ -21,42 +21,83 @@ class _HomePageState extends State<HomePage> {
       body: Container(
           constraints: BoxConstraints.expand(),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Expanded(
-                flex: 1,
-                child: Container(
-                  color: Colors.grey,
-                  child: Text("View A",
-                      style: TextStyle(
-                          fontSize: 20, fontWeight: FontWeight.bold)),
-                ),
+                  child: Column(
+                    children: [
+                      Expanded(
+                          child: Container(
+                            color: Colors.red,
+                            child: Center(
+                              child: Text("A"),
+                            ),
+                          )
+                      ),
+                      Expanded(
+                          child: Container(
+                            color: Colors.green,
+                            child: Center(
+                              child: Text("B"),
+                            ),
+                          )
+                      ),
+                      Expanded(
+                          child: Container(
+                            color: Colors.blue,
+                            child: Center(
+                              child: Text("C"),
+                            ),
+                          )
+                      ),
+                      Expanded(
+                          child: Container(
+                            color: Colors.teal,
+                            child: Center(
+                              child: Text("D"),
+                            ),
+                          )
+                      ),
+                    ],
+                  )
               ),
               Expanded(
-                flex: 2,
-                child: Container(
-                  color: Colors.indigo,
-                  child: Text("View B",
-                      style: TextStyle(
-                          fontSize: 20, fontWeight: FontWeight.bold)),
-                ),
-              ),
-              Expanded(
-                flex: 3,
-                child: Container(
-                  color: Colors.lightBlueAccent,
-                  child: Text("View C",
-                      style: TextStyle(
-                          fontSize: 20, fontWeight: FontWeight.bold)),
-                ),
-              ),
-              Container(
-                height: 300,
-                color: Colors.orange,
-                child: Text("View D",
-                    style: TextStyle(
-                        fontSize: 20, fontWeight: FontWeight.bold)),
+                  child: Row(
+                    children: [
+                      Expanded(
+                          child: Container(
+                            color: Colors.red,
+                            child: Center(
+                              child: Text("A"),
+                            ),
+                          )
+                      ),
+                      Expanded(
+                          child: Container(
+                            color: Colors.green,
+                            child: Center(
+                              child: Text("B"),
+                            ),
+                          )
+                      ),
+                      Expanded(
+                          child: Container(
+                            color: Colors.blue,
+                            child: Center(
+                              child: Text("C"),
+                            ),
+                          )
+                      ),
+                      Expanded(
+                          child: Container(
+                            color: Colors.teal,
+                            child: Center(
+                              child: Text("D"),
+                            ),
+                          )
+                      ),
+                    ],
+                  )
               ),
             ],
           )),
