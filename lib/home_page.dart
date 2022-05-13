@@ -24,81 +24,46 @@ class _HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Expanded(
-                  child: Column(
-                    children: [
-                      Expanded(
-                          child: Container(
-                            color: Colors.red,
-                            child: Center(
-                              child: Text("A"),
-                            ),
-                          )
+                  flex: 2,
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.red,
+                        border: Border.all(width: 1, color: Colors.black)),
+                    child: Center(
+                      child: Text(
+                        "1",
+                        style: TextStyle(color: Colors.white),
                       ),
-                      Expanded(
-                          child: Container(
-                            color: Colors.green,
-                            child: Center(
-                              child: Text("B"),
-                            ),
-                          )
-                      ),
-                      Expanded(
-                          child: Container(
-                            color: Colors.blue,
-                            child: Center(
-                              child: Text("C"),
-                            ),
-                          )
-                      ),
-                      Expanded(
-                          child: Container(
-                            color: Colors.teal,
-                            child: Center(
-                              child: Text("D"),
-                            ),
-                          )
-                      ),
-                    ],
-                  )
-              ),
+                    ),
+                  )),
               Expanded(
+                  flex: 8,
                   child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       Expanded(
+                          flex: 3,
                           child: Container(
-                            color: Colors.red,
+                            decoration: BoxDecoration(
+                                color: Colors.yellow,
+                                border: Border(
+                                  left:
+                                      BorderSide(color: Colors.black, width: 1),
+                                  right:
+                                      BorderSide(color: Colors.black, width: 1),
+                                  bottom:
+                                      BorderSide(color: Colors.black, width: 1),
+                                )),
                             child: Center(
-                              child: Text("A"),
+                              child: Text(
+                                "2",
+                                style: TextStyle(color: Colors.white),
+                              ),
                             ),
-                          )
-                      ),
-                      Expanded(
-                          child: Container(
-                            color: Colors.green,
-                            child: Center(
-                              child: Text("B"),
-                            ),
-                          )
-                      ),
-                      Expanded(
-                          child: Container(
-                            color: Colors.blue,
-                            child: Center(
-                              child: Text("C"),
-                            ),
-                          )
-                      ),
-                      Expanded(
-                          child: Container(
-                            color: Colors.teal,
-                            child: Center(
-                              child: Text("D"),
-                            ),
-                          )
-                      ),
+                          )),
+                      Expanded(flex: 7, child: Container()),
                     ],
-                  )
-              ),
+                  )),
             ],
           )),
     );
