@@ -19,52 +19,34 @@ class _HomePageState extends State<HomePage> {
         title: Text("Home Page"),
       ),
       body: Container(
-          constraints: BoxConstraints.expand(),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Expanded(
-                  flex: 2,
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: Colors.red,
-                        border: Border.all(width: 1, color: Colors.black)),
-                    child: Center(
-                      child: Text(
-                        "1",
-                        style: TextStyle(color: Colors.white),
-                      ),
+          child: Container (
+              width: 250,
+              height: 250,
+              color: Colors.blueGrey,
+              margin: EdgeInsets.all(20),
+              child: Stack (
+                clipBehavior: Clip.none,
+                children: <Widget>[
+                  Positioned(
+                    top: 50,
+                    left: 50,
+                    child: Container(
+                      width: 290,
+                      height: 100,
+                      color: Colors.green,
                     ),
-                  )),
-              Expanded(
-                  flex: 8,
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Expanded(
-                          flex: 3,
-                          child: Container(
-                            decoration: BoxDecoration(
-                                color: Colors.yellow,
-                                border: Border(
-                                  left:
-                                      BorderSide(color: Colors.black, width: 1),
-                                  right:
-                                      BorderSide(color: Colors.black, width: 1),
-                                  bottom:
-                                      BorderSide(color: Colors.black, width: 1),
-                                )),
-                            child: Center(
-                              child: Text(
-                                "2",
-                                style: TextStyle(color: Colors.white),
-                              ),
-                            ),
-                          )),
-                      Expanded(flex: 7, child: Container()),
-                    ],
-                  )),
-            ],
+                  ),
+                  Positioned(
+                    top: 70,
+                    left: 70,
+                    child: Container(
+                      width: 120,
+                      height: 230,
+                      color: Colors.yellow,
+                    ),
+                  )
+                ],
+              )
           )),
     );
   }
